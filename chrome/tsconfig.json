@@ -1,0 +1,21 @@
+{
+  "extends": "@tsconfig/svelte/tsconfig.json",
+  "compilerOptions": {
+    "strict": true,
+    //"declaration": false,
+    //"outDir": "./dist",
+    "target": "ES2017",
+    "module": "ES2020",
+    "moduleResolution": "node",
+    "forceConsistentCasingInFileNames": true,
+    "removeComments": true
+  },
+  "include": [
+    "src/**/*.svelte",
+    "src/**/*.d.ts",
+    "src/**/*.ts"
+  ],
+  "references": [{
+    "path": "./tsconfig.node.json"
+  }]
+}

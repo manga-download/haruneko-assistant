@@ -1,0 +1,8 @@
+{
+  "name": "hakuneko-assistant",
+  "description": "Browser extensions to interact with your running [HakuNeko](https://git.io/hakuneko) instance.",
+  "workspaces": [
+    "./chrome"
+  ],
+  "scripts": {}
+}
