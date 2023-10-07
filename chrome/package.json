@@ -1,20 +1,20 @@
 {
   "name": "chrome-extension",
   "private": true,
-  "version": "0.0.0",
+  "version": "0.1.0",
   "type": "module",
   "dependencies": {
     "websocket-rpc": "^1.0.2"
   },
   "devDependencies": {
-    "@sveltejs/vite-plugin-svelte": "^2.0.0",
-    "@tsconfig/svelte": "^3.0.0",
-    "@types/chrome": "^0.0.208",
-    "svelte": "^3.54.0",
-    "svelte-check": "^2.10.0",
-    "tslib": "^2.4.1",
-    "typescript": "^4.9.3",
-    "vite": "^4.0.0"
+    "@sveltejs/vite-plugin-svelte": "^2.4.6",
+    "@tsconfig/svelte": "^5.0.2",
+    "@types/chrome": "^0.0.246",
+    "svelte": "^4.2.1",
+    "svelte-check": "^3.5.2",
+    "tslib": "^2.6.2",
+    "typescript": "^5.2.2",
+    "vite": "^4.4.11"
   },
   "scripts": {
     "dev": "vite",
