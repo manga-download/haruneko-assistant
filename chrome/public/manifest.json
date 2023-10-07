@@ -1,6 +1,6 @@
 {
     "name": "HakuNeko Assistant",
-    "version": "2023.01.16",
+    "version": "2023.10.07",
     "manifest_version": 3,
     "icons": {
         "16": "assets/icon-16.png",
