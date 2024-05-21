@@ -15,8 +15,9 @@
         try {
             canSetCloudFlareBypass = false;
             canLoadMediaContainerFromURL = false;
-            const url = await GetCurrentURL();
-            const cookies = (await chrome.cookies.getAll({ url })).filter(cookie => [ '__cf_bm', 'cf_clearance' ].includes(cookie.name));
+            // NOTE: Include cookies which are partitioned
+            const details = { url: await GetCurrentURL(), partitionKey: { topLevelSite: null } } as chrome.cookies.GetAllDetails;
+            const cookies = (await chrome.cookies.getAll(details)).filter(cookie => [ '__cf_bm', 'cf_clearance' ].includes(cookie.name));
             cookies.forEach(cookie => delete cookie.expirationDate);
             await $websocket.Connect();
             await $websocket.Remote?.SetCloudFlareBypass(navigator.userAgent, cookies);
