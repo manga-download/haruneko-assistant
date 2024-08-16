@@ -9,7 +9,7 @@
 
 2. Install the HakuNeko Assistant Browser Extension for Chrome/Edge
    - Download the latest extension from [GitHub](https://github.com/manga-download/haruneko-assistant/releases)
-   - Extract the content of the Extension (Zip Archive)
+   - Extract the content of the Extension (the CRX file is a Zip Archive, extract it)
    - Open Chrome/Edge and switch to the Extension Manager
    - Enable Developer Mode and Load the unpacked Extension from its Directory
 
