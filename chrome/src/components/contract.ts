@@ -1,10 +1,7 @@
-// See => chrome.cookies.Cookie
-type MapInterface<T> = {
-    [key in keyof T]: T[key];
-};
+type KeyedCookie<T = chrome.cookies.Cookie> = { [K in keyof T]: KeyedCookie<T[K]> };
 
 export type Contract = {
-    SetCloudFlareBypass(userAgent: string, cookies: MapInterface<chrome.cookies.Cookie>[]): Promise<void>;
+    SetCloudFlareBypass(userAgent: string, cookies: KeyedCookie[]): Promise<void>;
     CanLoadMediaContainerFromURL(url: string): Promise<boolean>;
     LoadMediaContainerFromURL(url: string): Promise<void>;
 };

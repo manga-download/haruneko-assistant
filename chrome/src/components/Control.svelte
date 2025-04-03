@@ -15,10 +15,10 @@
         try {
             canSetCloudFlareBypass = false;
             canLoadMediaContainerFromURL = false;
-            // NOTE: Include cookies which are partitioned
-            const details = { url: await GetCurrentURL(), partitionKey: { topLevelSite: null } } as chrome.cookies.GetAllDetails;
-            const cookies = (await chrome.cookies.getAll(details)).filter(cookie => [ '__cf_bm', 'cf_clearance' ].includes(cookie.name));
-            cookies.forEach(cookie => delete cookie.expirationDate);
+            const cookies = (await chrome.cookies.getAll({
+                url: await GetCurrentURL(),
+                partitionKey: {}, // Provide empty partition key to also include partioned Cookies
+            })).filter(cookie => [ '__cf_bm', 'cf_clearance' ].includes(cookie.name));
             await $websocket.Connect();
             await $websocket.Remote?.SetCloudFlareBypass(navigator.userAgent, cookies);
         } catch(error) {
