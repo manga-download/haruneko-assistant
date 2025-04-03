@@ -1,7 +1,6 @@
 {
   "name": "chrome-extension",
   "private": true,
-  "version": "0.1.0",
   "type": "module",
   "dependencies": {
     "websocket-rpc": "github:manga-download/websocket-rpc#v1.2.7"
@@ -17,9 +16,7 @@
     "vite": "6.2.5"
   },
   "scripts": {
-    "dev": "vite",
     "build": "npm run check && vite build",
-    "preview": "vite preview",
     "check": "tsc --noEmit --pretty && svelte-check --tsconfig ./tsconfig.json"
   }
 }
